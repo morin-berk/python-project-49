@@ -5,7 +5,10 @@ brain-games:
 	poetry run python -m brain_games.scripts.brain_games
 
 brain-even:
-	poetry run python -m brain_games.scripts.brain_even
+	poetry run python -m brain_games.scripts.games.brain_even
+
+brain-calc:
+	poetry run python -m brain_games.scripts.games.brain_calc
 
 build:
 	poetry build
