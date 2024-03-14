@@ -10,6 +10,9 @@ brain-even:
 brain-calc:
 	poetry run python -m brain_games.scripts.games.brain_calc
 
+brain-gcd:
+	poetry run python -m brain_games.scripts.games.brain_gcd
+
 build:
 	poetry build
 
