@@ -13,6 +13,9 @@ brain-calc:
 brain-gcd:
 	poetry run python -m brain_games.scripts.games.brain_gcd
 
+brain-progression:
+	poetry run python -m brain_games.scripts.games.brain_progression
+
 build:
 	poetry build
 
