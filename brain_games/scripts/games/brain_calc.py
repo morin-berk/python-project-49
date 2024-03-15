@@ -1,7 +1,7 @@
 from random import randrange, choice
 from brain_games.cli import welcome_user
 from brain_games.scripts.brain_games import greet
-from brain_games.scripts.game_logic import game_logic
+from brain_games.scripts.game_logic import check_player_answer
 
 
 def play_calc():
@@ -33,11 +33,11 @@ def play_calc():
         question_expression = f'{str(first_num)} ' \
                               f'{str(rand_signs)} {str(second_num)}'
 
-        rounds = game_logic(correct_answer,
-                            name,
-                            question_expression,
-                            rounds
-                            )
+        rounds = check_player_answer(correct_answer,
+                                     name,
+                                     question_expression,
+                                     rounds
+                                     )
 
         if rounds == 3:
             print(f"Congratulations, {name}!")

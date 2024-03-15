@@ -1,7 +1,7 @@
 from random import randrange
 from brain_games.cli import welcome_user
 from brain_games.scripts.brain_games import greet
-from brain_games.scripts.game_logic import game_logic
+from brain_games.scripts.game_logic import check_player_answer
 
 
 def play_even_num():
@@ -23,10 +23,10 @@ def play_even_num():
 
         correct_answer = "yes" if random_number % 2 == 0 else "no"
 
-        rounds = game_logic(correct_answer,
-                            name,
-                            question_expression,
-                            rounds)
+        rounds = check_player_answer(correct_answer,
+                                     name,
+                                     question_expression,
+                                     rounds)
 
         if rounds == 3:
             print(f"Congratulations, {name}!")

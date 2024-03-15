@@ -1,7 +1,7 @@
 import prompt
 
 
-def game_logic(correct_answer, name, question_expression, rounds):
+def check_player_answer(correct_answer, name, question_expression, rounds):
     """
     Implementing a universal game logic.
     A func gets a random question,
