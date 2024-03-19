@@ -1,4 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/eab001b350e401ee7e57/maintainability)](https://codeclimate.com/github/morin-berk/brain-games/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d82b3cabb29a6d769662/maintainability)](https://codeclimate.com/github/morin-berk/python-project-49/maintainability)
 
 [![Actions Status](https://github.com/morin-berk/brain-games/workflows/hexlet-check/badge.svg)](https://github.com/morin-berk/brain-games/actions)
 
