@@ -1,6 +1,7 @@
 from random import randrange
 from brain_games.cli import welcome_user
 from brain_games.scripts.game_logic import check_player_answer
+from brain_games.consts import PROGRESSION_RULES, MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
 def play_progression():
@@ -11,8 +12,7 @@ def play_progression():
     """
     name = welcome_user()
 
-    rules = 'What number is missing in the progression?'
-    print(rules)
+    print(PROGRESSION_RULES)
 
     rounds = 0
 
@@ -21,7 +21,7 @@ def play_progression():
         progression_len = randrange(5, 10)
         missing_el_index = randrange(0, progression_len - 1)
         progression_step = randrange(1, 10)
-        first_num = randrange(0, 100 - progression_step)
+        first_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH - progression_step)
         progression = []
 
         for el in range(first_num,

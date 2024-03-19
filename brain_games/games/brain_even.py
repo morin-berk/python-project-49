@@ -1,6 +1,7 @@
 from random import randrange
 from brain_games.cli import welcome_user
 from brain_games.scripts.game_logic import check_player_answer
+from brain_games.consts import EVEN_RULES, MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
 def play_even_num():
@@ -10,13 +11,12 @@ def play_even_num():
     """
     name = welcome_user()
 
-    rules = 'Answer "yes" if the number is even, otherwise answer "no"'
-    print(rules)
+    print(EVEN_RULES)
 
     rounds = 0
 
     while -1 < rounds < 3:
-        random_number = randrange(1, 1000)
+        random_number = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
 
         question_expression = f'{str(random_number)}'
 

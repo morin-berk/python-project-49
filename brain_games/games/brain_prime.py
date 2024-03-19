@@ -1,6 +1,7 @@
 from random import randrange
 from brain_games.cli import welcome_user
 from brain_games.scripts.game_logic import check_player_answer
+from brain_games.consts import PRIME_RULES, MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
 def play_prime():
@@ -10,14 +11,13 @@ def play_prime():
     """
     name = welcome_user()
 
-    rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    print(rules)
+    print(PRIME_RULES)
 
     rounds = 0
 
     while -1 < rounds < 3:
 
-        random_num = randrange(1, 100)
+        random_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
 
         correct_answer = "no" if random_num == 1 else "yes"
 

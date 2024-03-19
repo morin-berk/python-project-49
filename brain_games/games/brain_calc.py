@@ -1,6 +1,8 @@
 from random import randrange, choice
 from brain_games.cli import welcome_user
 from brain_games.scripts.game_logic import check_player_answer
+from brain_games.consts import CALC_RULES, MIN_RANGE_LENGTH, \
+    MAX_RANGE_LENGTH, MATH_SIGNS
 
 
 def play_calc():
@@ -11,16 +13,15 @@ def play_calc():
     """
     name = welcome_user()
 
-    rules = 'What is the result of the expression?'
-    print(rules)
+    print(CALC_RULES)
 
     rounds = 0
 
     while -1 < rounds < 3:
 
-        first_num = randrange(1, 100)
-        second_num = randrange(1, 100)
-        rand_signs = choice(["+", "-", "*"])
+        first_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
+        second_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
+        rand_signs = choice(MATH_SIGNS)
 
         if rand_signs == '-':
             correct_answer = first_num - second_num
