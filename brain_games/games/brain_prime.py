@@ -1,6 +1,5 @@
 from random import randrange
 from brain_games.cli import welcome_user
-from brain_games.scripts.brain_games import greet
 from brain_games.scripts.game_logic import check_player_answer
 
 
@@ -39,12 +38,3 @@ def play_prime():
 
         if rounds == 3:
             print(f"Congratulations, {name}!")
-
-
-def main():
-    greet()
-    play_prime()
-
-
-if __name__ == '__main__':
-    main()
