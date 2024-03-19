@@ -21,11 +21,11 @@ def play_progression():
         progression_len = randrange(5, 10)
         missing_el_index = randrange(0, progression_len - 1)
         progression_step = randrange(1, 10)
-        first_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH - progression_step)
+        first_el = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH - progression_step)
         progression = []
 
-        for el in range(first_num,
-                        first_num + progression_step * progression_len,
+        for el in range(first_el,
+                        first_el + progression_step * progression_len,
                         progression_step):
             progression.append(el)
 

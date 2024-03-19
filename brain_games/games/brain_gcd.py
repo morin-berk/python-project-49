@@ -18,11 +18,11 @@ def play_gcd():
     rounds = 0
 
     while -1 < rounds < 3:
-        first_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
-        second_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
-        question_expression = f'{str(first_num)} {str(second_num)}'
+        num1, num2 = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH), \
+                     randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
+        question_expression = f'{str(num1)} {str(num2)}'
 
-        correct_answer = gcd(first_num, second_num)
+        correct_answer = gcd(num1, num2)
 
         rounds = check_player_answer(correct_answer,
                                      name,

@@ -19,19 +19,19 @@ def play_calc():
 
     while -1 < rounds < 3:
 
-        first_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
-        second_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
+        num1, num2 = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH), \
+                     randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
         rand_signs = choice(MATH_SIGNS)
 
         if rand_signs == '-':
-            correct_answer = first_num - second_num
+            correct_answer = num1 - num2
         elif rand_signs == "+":
-            correct_answer = first_num + second_num
+            correct_answer = num1 + num2
         else:
-            correct_answer = first_num * second_num
+            correct_answer = num1 * num2
 
-        question_expression = f'{str(first_num)} ' \
-                              f'{str(rand_signs)} {str(second_num)}'
+        question_expression = f'{str(num1)} ' \
+                              f'{str(rand_signs)} {str(num2)}'
 
         rounds = check_player_answer(correct_answer,
                                      name,
