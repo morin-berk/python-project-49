@@ -1,6 +1,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d82b3cabb29a6d769662/maintainability)](https://codeclimate.com/github/morin-berk/python-project-49/maintainability)
 
-[![Actions Status](https://github.com/morin-berk/brain-games/workflows/hexlet-check/badge.svg)](https://github.com/morin-berk/brain-games/actions)
+[![Actions Status](https://github.com/morin-berk/brain-games/workflows/hexlet-check/badge.svg)](https://github.com/morin-berk/python-project-49/actions)
 
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
