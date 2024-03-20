@@ -5,6 +5,17 @@ from brain_games.consts import CALC_RULES, MIN_RANGE_LENGTH, \
     MAX_RANGE_LENGTH, MATH_SIGNS
 
 
+def get_correct_answer(rand_sign, num1, num2):
+    if rand_sign == '-':
+        correct_answer = num1 - num2
+    elif rand_sign == "+":
+        correct_answer = num1 + num2
+    else:
+        correct_answer = num1 * num2
+
+    return correct_answer
+
+
 def play_calc():
     """
     The game asks a player an answer to the simple
@@ -21,17 +32,12 @@ def play_calc():
 
         num1, num2 = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH), \
                      randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
-        rand_signs = choice(MATH_SIGNS)
+        random_sign = choice(MATH_SIGNS)
 
-        if rand_signs == '-':
-            correct_answer = num1 - num2
-        elif rand_signs == "+":
-            correct_answer = num1 + num2
-        else:
-            correct_answer = num1 * num2
+        correct_answer = get_correct_answer(random_sign, num1, num2)
 
         question_expression = f'{str(num1)} ' \
-                              f'{str(rand_signs)} {str(num2)}'
+                              f'{str(random_sign)} {str(num2)}'
 
         rounds = check_player_answer(correct_answer,
                                      name,
