@@ -4,6 +4,17 @@ from brain_games.scripts.game_logic import check_player_answer
 from brain_games.consts import PRIME_RULES, MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
+def is_prime(random_num):
+    if random_num == 1:
+        return False
+
+    for el in range(2, int(random_num ** 0.5) + 1):
+        if random_num % el == 0:
+            return False
+
+    return True
+
+
 def play_prime():
     """
     The game asks a player whether a number is prime or not.
@@ -18,16 +29,7 @@ def play_prime():
     while -1 < rounds < 3:
 
         random_num = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
-
-        correct_answer = "no" if random_num == 1 else "yes"
-
-        for el in range(2, random_num):
-            if random_num % el == 0 and el != random_num:
-                correct_answer = "no"
-                break
-            else:
-                correct_answer = "yes"
-
+        correct_answer = "yes" if is_prime(random_num) else "no"
         question_expression = str(random_num)
 
         rounds = check_player_answer(correct_answer,
