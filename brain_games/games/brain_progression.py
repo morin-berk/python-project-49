@@ -1,8 +1,5 @@
 from random import randrange
-from brain_games.cli import welcome_user
-from brain_games.scripts.game_logic import check_player_answer
-from brain_games.consts import PROGRESSION_RULES, \
-    MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
+from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
 def get_correct_answer_and_progression():
@@ -27,23 +24,8 @@ def play_progression():
     """
     The game asks a player to find a mission number
     in an arithmetic progression.
-    If a player answers correctly 3 times, they win.
     """
-    name = welcome_user()
+    correct_answer, progression = get_correct_answer_and_progression()
+    question_expression = ' '.join(map(str, progression))
 
-    print(PROGRESSION_RULES)
-
-    rounds = 0
-
-    while -1 < rounds < 3:
-        correct_answer, progression = get_correct_answer_and_progression()
-        question_expression = ' '.join(map(str, progression))
-
-        rounds = check_player_answer(correct_answer,
-                                     name,
-                                     question_expression,
-                                     rounds
-                                     )
-
-        if rounds == 3:
-            print(f"Congratulations, {name}!")
+    return correct_answer, question_expression
