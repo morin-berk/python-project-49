@@ -2,6 +2,9 @@ from random import randrange
 from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
+EVEN_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+
+
 def play_even_num():
     """
     The game asks a player if a number is even or odd.

@@ -2,6 +2,9 @@ from random import randrange
 from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
+PRIME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+
 def is_prime(random_num):
     if random_num == 1:
         return False

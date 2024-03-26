@@ -1,5 +1,9 @@
 from random import randrange
-from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
+from brain_games.consts import MIN_RANGE_LENGTH, \
+    MAX_RANGE_LENGTH
+
+
+PROGRESSION_RULES = 'What number is missing in the progression?'
 
 
 def get_correct_answer_and_progression():

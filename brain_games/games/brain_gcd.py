@@ -3,6 +3,9 @@ from math import gcd
 from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
+GCD_RULES = 'Find the greatest common divisor of given numbers.'
+
+
 def get_two_nums():
     num1, num2 = randrange(MIN_RANGE_LENGTH, MAX_RANGE_LENGTH), randrange(
         MIN_RANGE_LENGTH, MAX_RANGE_LENGTH)
