@@ -1,10 +1,12 @@
 import prompt
 
-from brain_games.cli import welcome_user
+from brain_games.consts import MAX_ROUNDS
 
 
-def get_name():
-    name = welcome_user()
+def greet_and_get_name():
+    print("Welcome to the Brain Games!")
+    name = prompt.string('May I have your name? ')
+    print('Hello, ' + name + '!')
     return name
 
 
@@ -13,12 +15,15 @@ def play_rounds(play_game):
     If a player answers correctly 3 times in a row, they win.
     If a player answers incorrectly at least once, a game ends.
     """
-    name = get_name()
+    name = greet_and_get_name()
+
+    _, _, rules = play_game()
+    print(rules)
 
     rounds = 0
 
-    while -1 < rounds < 3:
-        correct_answer, question_expression = play_game()
+    while rounds < MAX_ROUNDS:
+        correct_answer, question_expression, _ = play_game()
         question = f'Question: {question_expression}'
         print(question)
         player_answer = prompt.string('Your answer: ')
@@ -30,8 +35,7 @@ def play_rounds(play_game):
             print(f"'{player_answer}' is wrong answer ;(. "
                   f"Correct answer was '{correct_answer}'.)")
             print(f"Let's try again, {name}!")
-            # a player loses and a game ends
-            rounds = -1
+            return
 
-        if rounds == 3:
+        if rounds == MAX_ROUNDS:
             print(f"Congratulations, {name}!")

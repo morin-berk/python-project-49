@@ -32,4 +32,4 @@ def play_progression():
     correct_answer, progression = get_correct_answer_and_progression()
     question_expression = ' '.join(map(str, progression))
 
-    return correct_answer, question_expression
+    return correct_answer, question_expression, PROGRESSION_RULES

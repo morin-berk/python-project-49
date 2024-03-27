@@ -12,7 +12,6 @@ def is_prime(random_num):
     for el in range(2, int(random_num ** 0.5) + 1):
         if random_num % el == 0:
             return False
-
     return True
 
 
@@ -25,4 +24,4 @@ def play_prime():
     correct_answer = "yes" if is_prime(random_num) else "no"
     question_expression = str(random_num)
 
-    return correct_answer, question_expression
+    return correct_answer, question_expression, PRIME_RULES
