@@ -1,6 +1,9 @@
 install:
 	poetry install
 
+brain-games:
+	poetry run python -m brain_games.scripts.brain_games
+
 brain-even:
 	poetry run python -m brain_games.scripts.brain_even
 
