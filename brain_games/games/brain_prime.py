@@ -24,4 +24,4 @@ def play_prime():
     correct_answer = "yes" if is_prime(random_num) else "no"
     question_expression = str(random_num)
 
-    return correct_answer, question_expression, PRIME_RULES
+    return correct_answer, question_expression

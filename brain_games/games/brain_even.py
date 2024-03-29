@@ -18,4 +18,4 @@ def play_even_num():
     question_expression = f'{random_number}'
     correct_answer = "yes" if is_even(random_number) else "no"
 
-    return correct_answer, question_expression, EVEN_RULES
+    return correct_answer, question_expression

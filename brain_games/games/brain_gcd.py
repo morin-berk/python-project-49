@@ -16,4 +16,4 @@ def play_gcd():
     question_expression = f'{num1} {num2}'
     correct_answer = gcd(num1, num2)
 
-    return correct_answer, question_expression, GCD_RULES
+    return correct_answer, question_expression

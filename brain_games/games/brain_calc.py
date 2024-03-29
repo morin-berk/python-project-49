@@ -27,4 +27,4 @@ def play_calc():
     correct_answer = get_correct_answer(random_sign, num1, num2)
     question_expression = f'{num1} {random_sign} {num2}'
 
-    return correct_answer, question_expression, CALC_RULES
+    return correct_answer, question_expression
