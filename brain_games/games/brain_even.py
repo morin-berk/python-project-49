@@ -2,14 +2,14 @@ from random import randrange
 from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
-EVEN_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(random_num):
     return True if (random_num % 2 == 0) else False
 
 
-def play_even_num():
+def play_game():
     """
     The game asks a player if a number is even or odd.
     If a player answers correctly 3 times, they win.

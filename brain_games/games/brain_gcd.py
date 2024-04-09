@@ -3,10 +3,10 @@ from math import gcd
 from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
-GCD_RULES = 'Find the greatest common divisor of given numbers.'
+RULES = 'Find the greatest common divisor of given numbers.'
 
 
-def play_gcd():
+def play_game():
     """
     The game asks a player to find the greatest common divisor
     of given numbers.

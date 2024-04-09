@@ -2,7 +2,7 @@ from random import randrange
 from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH
 
 
-PRIME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(random_num):
@@ -15,7 +15,7 @@ def is_prime(random_num):
     return True
 
 
-def play_prime():
+def play_game():
     """
     The game asks a player whether a number is prime or not.
     If a player answers correctly 3 times, they win.

@@ -1,7 +1,7 @@
 from random import randrange, choice
 from brain_games.consts import MIN_RANGE_LENGTH, MAX_RANGE_LENGTH, MATH_SIGNS
 
-CALC_RULES = 'What is the result of the expression?'
+RULES = 'What is the result of the expression?'
 
 
 def get_correct_answer(rand_sign, num1, num2):
@@ -15,7 +15,7 @@ def get_correct_answer(rand_sign, num1, num2):
     return correct_answer
 
 
-def play_calc():
+def play_game():
     """
     The game asks a player an answer to the simple
     arithmetical expression (+, - or *).
